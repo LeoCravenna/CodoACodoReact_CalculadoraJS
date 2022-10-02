@@ -8,7 +8,6 @@
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" media="all" />
   <link rel="stylesheet" type="text/css" href="assets/css/style.css" media="all" />
-  <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -21,8 +20,8 @@
       <div class="calculadora">
 
         <div class="display">
-            <div id="val-anterior">Tu resultado es...</div>
-            <div id="val-actual">cálculo a realizar</div>
+            <div id="val-anterior"></div>
+            <div id="val-actual"></div>
         </div>
         
         <!--FILA 1-->
@@ -31,7 +30,7 @@
         <button class="operador">x!</button>
         <button class="operador">x²</button>
         <button class="operador">²√¯</button>
-        <button>C</button>    
+        <button onclick="display.borrarTodo()">C</button>    
 
         <!--FILA 2-->
         <button class="operador">sin</button>
@@ -39,13 +38,13 @@
         <button class="operador">tan</button>
         <button class="operador">x³</button>
         <button class="operador">√¯</button>
-        <button>&larr;</button>   
+        <button onclick="display.borrar()">&larr;</button>   
 
         <!--FILA 3-->
         <button class="numero">7</button>
         <button class="numero">8</button>
         <button class="numero">9</button>
-        <button class="operador">/</button>
+        <button class="operador" value="dividir">/</button>
         <button class="operador">%</button>
         <button class="operador">In</button>
 
@@ -53,22 +52,22 @@
         <button class="numero">4</button>
         <button class="numero">5</button>
         <button class="numero">6</button>
-        <button class="operador">*</button>
+        <button class="operador" value="multiplicar">*</button>
         <button class="operador">log</button>
         <button class="operador">e</button>
 
         <!--FILA 5-->
-        <button class="numero">1</button>
+        <button class="numero" >1</button>
         <button class="numero">2</button>
-        <button class="numero">3</button>
-        <button class="operador">-</button>
+        <button class="numero" >3</button>
+        <button class="operador" value="restar">-</button>
         <button class="operador">AC</button>
-        <button class="operador fila-2">=</button>
+        <button class="operador fila-2" value="igual">=</button>
 
         <!--FILA 6-->
         <button class="columna-2 numero">0</button>
         <button class="numero">.</button>
-        <button class="operador">+</button>
+        <button class="operador" value="sumar">+</button>
         <button class="operador">MR</button>
 
       </div>
@@ -78,5 +77,9 @@
   </main>
 
   <script src="assets/js/bootstrap.min.js"></script>  
+  <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+  <script src="assets/js/Calculadora.js" type="text/javascript"></script>
+  <script src="assets/js/Display.js" type="text/javascript"></script>
+  <script src="assets/js/index.js" type="text/javascript"></script>
 </body>
 </html>
